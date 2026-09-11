@@ -10,9 +10,9 @@ import residence from "@/assets/aveline-residence.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aveline House | Considered Residential Care" },
+      { title: "Kennie Vale Supported Living | Considered Residential Care" },
       { name: "description", content: "Aveline House offers warm, personal residential care shaped around the life you choose." },
-      { property: "og:title", content: "Aveline House | Considered Residential Care" },
+      { property: "og:title", content: "Kennie Vale Supported Living | Considered Residential Care" },
       { property: "og:description", content: "Warm, personal residential care shaped around the life you choose." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -34,9 +34,9 @@ function Index() {
     <div className="min-h-screen overflow-x-hidden bg-ivory text-ink antialiased">
       <header className="relative z-30 bg-ivory">
         <div className="mx-auto flex h-24 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-12">
-          <a href="#top" className="flex items-baseline gap-2" aria-label="Aveline House home">
-            <span className="font-serif text-3xl font-light">Aveline</span>
-            <span className="text-[10px] uppercase tracking-[0.28em] text-ink-soft">House</span>
+          <a href="#top" className="flex flex-col items-start gap-0.5 sm:flex-row sm:items-baseline sm:gap-2" aria-label="Kennie Vale Supported Living home">
+            <span className="font-serif text-xl font-light sm:text-3xl">Kennie Vale</span>
+            <span className="text-[9px] uppercase tracking-[0.2em] text-ink-soft sm:text-[10px] sm:tracking-[0.28em]">Supported Living</span>
           </a>
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary navigation">
             {navItems.map((item) => <a key={item} href={`#${item.toLowerCase()}`} className="text-sm text-ink-soft transition-colors hover:text-ink">{item}</a>)}
@@ -55,8 +55,10 @@ function Index() {
       </header>
 
       <main id="top">
-        <section className="mx-auto max-w-[1440px] px-5 pb-24 md:px-10 md:pb-32 lg:px-12">
-          <div className="grid grid-cols-4 items-start gap-4 md:grid-cols-12 md:gap-6">
+        <section className="relative mx-auto max-w-[1440px] px-5 pb-24 md:px-10 md:pb-32 lg:px-12">
+          {/* Video background placeholder — drop a <video> or background image here later */}
+          <div className="absolute inset-0 -z-10 bg-ivory/40 backdrop-blur-md" aria-hidden="true" />
+          <div className="relative z-10 grid grid-cols-4 items-start gap-4 md:grid-cols-12 md:gap-6">
             <figure className="col-span-4 md:col-span-8 lg:col-span-7">
               <img src={conservatory} width={1440} height={960} fetchPriority="high" alt="Sunlit conservatory lounge overlooking landscaped gardens" className="aspect-[16/10] w-full object-cover" />
             </figure>
@@ -105,7 +107,7 @@ function Index() {
           <div className="absolute inset-0 bg-ink/35" />
           <div className="relative mx-auto flex min-h-[78vh] max-w-[1440px] items-end px-5 py-16 md:px-10 md:py-24 lg:px-12">
             <div className="max-w-xl border-l border-ivory/60 pl-6 md:pl-10">
-              <p className="mb-5 text-xs uppercase tracking-[0.28em]">Life at Aveline</p>
+              <p className="mb-5 text-xs uppercase tracking-[0.28em]">Life at Kennie Vale Supported Living</p>
               <h2 className="font-serif text-5xl font-light leading-[1.04] md:text-7xl">Room for every kind of day</h2>
               <p className="mt-6 max-w-md text-lg leading-8">Company when you want it. Quiet when you don’t. And people nearby who understand the difference.</p>
             </div>
@@ -115,11 +117,11 @@ function Index() {
         <section id="locations" className="bg-parchment">
           <div className="mx-auto grid max-w-[1440px] grid-cols-4 gap-10 px-5 py-24 md:grid-cols-12 md:px-10 md:py-32 lg:px-12">
             <div className="col-span-4 md:col-span-7">
-              <img src={residence} width={1408} height={1008} loading="lazy" alt="Aveline House in its mature landscaped grounds" className="aspect-[7/5] w-full object-cover" />
+              <img src={residence} width={1408} height={1008} loading="lazy" alt="Kennie Vale Supported Living in its mature landscaped grounds" className="aspect-[7/5] w-full object-cover" />
             </div>
             <div className="col-span-4 self-center md:col-span-4 md:col-start-9">
               <p className="mb-5 text-xs uppercase tracking-[0.28em] text-clay">Our first residence</p>
-              <h2 className="font-serif text-4xl font-light md:text-6xl">Aveline at Weston</h2>
+              <h2 className="font-serif text-4xl font-light md:text-6xl">Kennie Vale Supported Living at Weston</h2>
               <p className="mt-6 text-lg leading-8 text-ink-soft">A light-filled country house set within twelve acres of gardens, just beyond the edge of the city.</p>
               <a href="#contact" className="mt-8 inline-flex items-center gap-3 border-b border-ink/30 pb-2 text-sm font-medium">Discover Weston <ArrowRight className="size-4" /></a>
             </div>
@@ -137,9 +139,9 @@ function Index() {
 
         <section id="insights" className="border-y border-border bg-parchment">
           <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-32 lg:px-12">
-            <div className="mb-12 flex items-end justify-between gap-6"><div><p className="mb-4 text-xs uppercase tracking-[0.28em] text-clay">The Aveline journal</p><h2 className="font-serif text-4xl font-light md:text-6xl">Stories worth sharing</h2></div><a href="#" className="hidden border-b border-ink/30 pb-1 text-sm md:block">View all stories</a></div>
+            <div className="mb-12 flex items-end justify-between gap-6"><div><p className="mb-4 text-xs uppercase tracking-[0.28em] text-clay">The Kennie Vale Supported Living journal</p><h2 className="font-serif text-4xl font-light md:text-6xl">Stories worth sharing</h2></div><a href="#" className="hidden border-b border-ink/30 pb-1 text-sm md:block">View all stories</a></div>
             <div className="grid gap-0 border-t border-border md:grid-cols-3">
-              {[['Living well','The small rituals that make a new place feel familiar'],['From the kitchen','Why every good conversation begins at the table'],['People','Meet Ada, our head gardener and keeper of seasons']].map(([label,title], index) => <article key={title} className="border-b border-border py-8 md:border-r md:px-8 md:first:pl-0 md:last:border-r-0"><span className="text-xs uppercase tracking-[0.22em] text-clay">0{index + 1} · {label}</span><h3 className="mt-5 font-serif text-2xl leading-tight md:text-3xl">{title}</h3><a href="#" className="mt-7 inline-flex items-center gap-3 text-sm">Read story <ArrowRight className="size-4" /></a></article>)}
+              {[["Living well","The small rituals that make a new place feel familiar"],["From the kitchen","Why every good conversation begins at the table"],["People","Meet Ada, our head gardener and keeper of seasons"]].map(([label,title], index) => <article key={title} className="border-b border-border py-8 md:border-r md:px-8 md:first:pl-0 md:last:border-r-0"><span className="text-xs uppercase tracking-[0.22em] text-clay">0{index + 1} · {label}</span><h3 className="mt-5 font-serif text-2xl leading-tight md:text-3xl">{title}</h3><a href="#" className="mt-7 inline-flex items-center gap-3 text-sm">Read story <ArrowRight className="size-4" /></a></article>)}
             </div>
           </div>
         </section>
@@ -156,12 +158,12 @@ function Index() {
       <footer className="border-t border-border bg-ivory">
         <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-12">
           <div className="grid grid-cols-4 gap-10 md:grid-cols-12">
-            <div className="col-span-4 md:col-span-5"><div className="flex items-baseline gap-2"><span className="font-serif text-3xl font-light">Aveline</span><span className="text-[10px] uppercase tracking-[0.28em] text-ink-soft">House</span></div><p className="mt-5 max-w-xs text-sm leading-7 text-ink-soft">Residential care built on hospitality, dignity and genuine human connection.</p></div>
+            <div className="col-span-4 md:col-span-5"><div className="flex flex-col items-start gap-0.5 sm:flex-row sm:items-baseline sm:gap-2"><span className="font-serif text-3xl font-light">Kennie Vale</span><span className="text-[10px] uppercase tracking-[0.28em] text-ink-soft">Supported Living</span></div><p className="mt-5 max-w-xs text-sm leading-7 text-ink-soft">Residential care built on hospitality, dignity and genuine human connection.</p></div>
             <div className="col-span-2 md:col-span-2"><p className="mb-4 text-xs uppercase tracking-[0.22em] text-ink-soft">Explore</p>{navItems.slice(0,3).map(item => <a key={item} href={`#${item.toLowerCase()}`} className="mb-3 block text-sm">{item}</a>)}</div>
             <div className="col-span-2 md:col-span-2"><p className="mb-4 text-xs uppercase tracking-[0.22em] text-ink-soft">More</p>{navItems.slice(3).map(item => <a key={item} href={`#${item.toLowerCase()}`} className="mb-3 block text-sm">{item}</a>)}</div>
             <div className="col-span-4 md:col-span-3"><p className="mb-4 text-xs uppercase tracking-[0.22em] text-ink-soft">Visit</p><p className="text-sm leading-7 text-ink-soft">18 Harbour Lane<br />Weston Quay, WY1 4AB<br /><a href="tel:+441610000000" className="text-ink">+44 161 000 0000</a></p></div>
           </div>
-          <div className="mt-14 flex flex-col justify-between gap-4 border-t border-border pt-8 text-xs text-ink-soft sm:flex-row"><p>© 2026 Aveline House. All rights reserved.</p><div className="flex gap-6"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+          <div className="mt-14 flex flex-col justify-between gap-4 border-t border-border pt-8 text-xs text-ink-soft sm:flex-row"><p>© 2026 Kennie Vale Supported Living. All rights reserved.</p><div className="flex gap-6"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
         </div>
       </footer>
     </div>
